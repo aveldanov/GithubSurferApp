@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		21488C61249B480700DF7564 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21488C5F249B480700DF7564 /* Main.storyboard */; };
 		21488C63249B480900DF7564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21488C62249B480900DF7564 /* Assets.xcassets */; };
 		21488C66249B480900DF7564 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21488C64249B480900DF7564 /* LaunchScreen.storyboard */; };
+		21549528249C741000D0621E /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 21549527249C741000D0621E /* LICENSE.md */; };
 		2F745163845480466ECCBF8E /* Pods_GithubSurferApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010BE3124EB9939861BC65C5 /* Pods_GithubSurferApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		21488C62249B480900DF7564 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21488C65249B480900DF7564 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21488C67249B480900DF7564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21549527249C741000D0621E /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		964656C745E4C26D2B1269AD /* Pods-GithubSurferApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSurferApp.debug.xcconfig"; path = "Target Support Files/Pods-GithubSurferApp/Pods-GithubSurferApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F4B660663062E6E8DA06D0CF /* Pods-GithubSurferApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSurferApp.release.xcconfig"; path = "Target Support Files/Pods-GithubSurferApp/Pods-GithubSurferApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -45,6 +47,7 @@
 		21488C4D249B480700DF7564 = {
 			isa = PBXGroup;
 			children = (
+				21549527249C741000D0621E /* LICENSE.md */,
 				21488C58249B480700DF7564 /* GithubSurferApp */,
 				21488C57249B480700DF7564 /* Products */,
 				F8EE3695B40EFFA4F453263C /* Pods */,
@@ -112,7 +115,6 @@
 				964656C745E4C26D2B1269AD /* Pods-GithubSurferApp.debug.xcconfig */,
 				F4B660663062E6E8DA06D0CF /* Pods-GithubSurferApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -176,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21549528249C741000D0621E /* LICENSE.md in Resources */,
 				21488C66249B480900DF7564 /* LaunchScreen.storyboard in Resources */,
 				21488C63249B480900DF7564 /* Assets.xcassets in Resources */,
 				21488C61249B480700DF7564 /* Main.storyboard in Resources */,
