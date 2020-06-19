@@ -56,15 +56,39 @@
 		21488C58249B480700DF7564 /* GithubSurferApp */ = {
 			isa = PBXGroup;
 			children = (
+				21549524249C6E3600D0621E /* Model */,
+				21549526249C6E5000D0621E /* View */,
+				21549525249C6E4400D0621E /* Controller */,
 				21488C59249B480700DF7564 /* AppDelegate.swift */,
 				21488C5B249B480700DF7564 /* SceneDelegate.swift */,
-				21488C5D249B480700DF7564 /* ViewController.swift */,
-				21488C5F249B480700DF7564 /* Main.storyboard */,
 				21488C62249B480900DF7564 /* Assets.xcassets */,
 				21488C64249B480900DF7564 /* LaunchScreen.storyboard */,
 				21488C67249B480900DF7564 /* Info.plist */,
 			);
 			path = GithubSurferApp;
+			sourceTree = "<group>";
+		};
+		21549524249C6E3600D0621E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		21549525249C6E4400D0621E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				21488C5D249B480700DF7564 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		21549526249C6E5000D0621E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21488C5F249B480700DF7564 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
