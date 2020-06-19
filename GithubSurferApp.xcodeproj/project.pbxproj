@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		21488C5A249B480700DF7564 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21488C59249B480700DF7564 /* AppDelegate.swift */; };
 		21488C5C249B480700DF7564 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21488C5B249B480700DF7564 /* SceneDelegate.swift */; };
-		21488C5E249B480700DF7564 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21488C5D249B480700DF7564 /* ViewController.swift */; };
+		21488C5E249B480700DF7564 /* TrendingFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21488C5D249B480700DF7564 /* TrendingFeedViewController.swift */; };
 		21488C61249B480700DF7564 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21488C5F249B480700DF7564 /* Main.storyboard */; };
 		21488C63249B480900DF7564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21488C62249B480900DF7564 /* Assets.xcassets */; };
 		21488C66249B480900DF7564 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21488C64249B480900DF7564 /* LaunchScreen.storyboard */; };
 		21549528249C741000D0621E /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 21549527249C741000D0621E /* LICENSE.md */; };
+		2154952A249C7B6900D0621E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21549529249C7B6900D0621E /* SearchViewController.swift */; };
 		2F745163845480466ECCBF8E /* Pods_GithubSurferApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010BE3124EB9939861BC65C5 /* Pods_GithubSurferApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,12 +23,13 @@
 		21488C56249B480700DF7564 /* GithubSurferApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubSurferApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21488C59249B480700DF7564 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21488C5B249B480700DF7564 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		21488C5D249B480700DF7564 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		21488C5D249B480700DF7564 /* TrendingFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingFeedViewController.swift; sourceTree = "<group>"; };
 		21488C60249B480700DF7564 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21488C62249B480900DF7564 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21488C65249B480900DF7564 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21488C67249B480900DF7564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21549527249C741000D0621E /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		21549529249C7B6900D0621E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		964656C745E4C26D2B1269AD /* Pods-GithubSurferApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSurferApp.debug.xcconfig"; path = "Target Support Files/Pods-GithubSurferApp/Pods-GithubSurferApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F4B660663062E6E8DA06D0CF /* Pods-GithubSurferApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSurferApp.release.xcconfig"; path = "Target Support Files/Pods-GithubSurferApp/Pods-GithubSurferApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,7 +90,8 @@
 		21549525249C6E4400D0621E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				21488C5D249B480700DF7564 /* ViewController.swift */,
+				21488C5D249B480700DF7564 /* TrendingFeedViewController.swift */,
+				21549529249C7B6900D0621E /* SearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -234,8 +237,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21488C5E249B480700DF7564 /* ViewController.swift in Sources */,
+				21488C5E249B480700DF7564 /* TrendingFeedViewController.swift in Sources */,
 				21488C5A249B480700DF7564 /* AppDelegate.swift in Sources */,
+				2154952A249C7B6900D0621E /* SearchViewController.swift in Sources */,
 				21488C5C249B480700DF7564 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
