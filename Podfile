@@ -8,6 +8,11 @@ target 'GithubSurferApp' do
   # Pods for GithubSurferApp
 
 
- 
+ pod 'RxSwift'
+ pod 'RxCocoa'
+ pod 'Alamofire'
+ pod 'AlamofireImage'
+
+	
 
 end
