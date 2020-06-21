@@ -15,7 +15,9 @@ class TrendingFeedViewController: UIViewController, UITableViewDelegate, UITable
   
   override func viewDidLoad() {
     super.viewDidLoad()
-
+    tableView.delegate = self
+    tableView.dataSource = self
+    tableView.reloadData()
   }
   
   func numberOfSections(in tableView: UITableView) -> Int {
@@ -26,12 +28,16 @@ class TrendingFeedViewController: UIViewController, UITableViewDelegate, UITable
     return 1
   }
   
-  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: "trendingRepoTableViewCell") as? TrendingRepoTableViewCell else {return UITableViewCell()}
+
+  
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "trendingRepoTableViewCell") as? TrendingRepoTableViewCell else {return UITableViewCell()}
     let repo = RepoModel(image: UIImage(named: "searchIconLarge")!, name: "Swift", description: "Descrip", numberOfForks: 22, lang: "C++", numberOfContributors: 687, repoUrl: "www.intuit.com")
     cell.configureCell(repo: repo)
+    
+    return cell
   }
-  
 
 
 }

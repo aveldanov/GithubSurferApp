@@ -19,6 +19,7 @@
 		21549530249DEBEE00D0621E /* RoundedBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2154952F249DEBEE00D0621E /* RoundedBorderTextField.swift */; };
 		21549532249ED20900D0621E /* RepoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21549531249ED20900D0621E /* RepoModel.swift */; };
 		21549534249ED52E00D0621E /* TrendingRepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21549533249ED52E00D0621E /* TrendingRepoTableViewCell.swift */; };
+		21549538249F16C800D0621E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21549537249F16C800D0621E /* Constants.swift */; };
 		2F745163845480466ECCBF8E /* Pods_GithubSurferApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010BE3124EB9939861BC65C5 /* Pods_GithubSurferApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		2154952F249DEBEE00D0621E /* RoundedBorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBorderTextField.swift; sourceTree = "<group>"; };
 		21549531249ED20900D0621E /* RepoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoModel.swift; sourceTree = "<group>"; };
 		21549533249ED52E00D0621E /* TrendingRepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoTableViewCell.swift; sourceTree = "<group>"; };
+		21549537249F16C800D0621E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		964656C745E4C26D2B1269AD /* Pods-GithubSurferApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSurferApp.debug.xcconfig"; path = "Target Support Files/Pods-GithubSurferApp/Pods-GithubSurferApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F4B660663062E6E8DA06D0CF /* Pods-GithubSurferApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSurferApp.release.xcconfig"; path = "Target Support Files/Pods-GithubSurferApp/Pods-GithubSurferApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +78,8 @@
 		21488C58249B480700DF7564 /* GithubSurferApp */ = {
 			isa = PBXGroup;
 			children = (
+				21549536249F16A200D0621E /* Utilities */,
+				21549535249F168B00D0621E /* Services */,
 				21549524249C6E3600D0621E /* Model */,
 				21549526249C6E5000D0621E /* View */,
 				21549525249C6E4400D0621E /* Controller */,
@@ -114,6 +118,21 @@
 				2154952D249DEA6D00D0621E /* RoundedCornerButton.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		21549535249F168B00D0621E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		21549536249F16A200D0621E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				21549537249F16C800D0621E /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		4A2494F550845D878DD8BEC1 /* Frameworks */ = {
@@ -257,6 +276,7 @@
 				2154952E249DEA6D00D0621E /* RoundedCornerButton.swift in Sources */,
 				21549534249ED52E00D0621E /* TrendingRepoTableViewCell.swift in Sources */,
 				21488C5C249B480700DF7564 /* SceneDelegate.swift in Sources */,
+				21549538249F16C800D0621E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
