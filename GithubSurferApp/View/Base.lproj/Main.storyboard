@@ -156,6 +156,16 @@
                                                 <constraint firstItem="E5r-7r-9Dz" firstAttribute="leading" secondItem="1Vc-05-bGZ" secondAttribute="leadingMargin" constant="12" id="i0y-0S-z3l"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="backViewOutlet" destination="E5r-7r-9Dz" id="ilz-XY-HKF"/>
+                                            <outlet property="contribLabel" destination="mgD-jW-FEF" id="GWA-jl-ZxR"/>
+                                            <outlet property="langLabel" destination="pTE-iq-zOY" id="N4R-bz-MDc"/>
+                                            <outlet property="numberOfForksLabel" destination="JhT-he-7mW" id="EYS-Sv-SUA"/>
+                                            <outlet property="repoDescLabel" destination="s23-2T-une" id="acM-cJ-I0a"/>
+                                            <outlet property="repoImageView" destination="2qW-Ah-K7O" id="vq1-8d-XrU"/>
+                                            <outlet property="repoNameLabel" destination="3ae-mk-4Bb" id="BeW-sB-ioy"/>
+                                            <outlet property="viewReadMeButtonOutlet" destination="vX5-74-3Qx" id="huM-Vp-LGh"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
