@@ -28,8 +28,8 @@ class TrendingFeedViewController: UIViewController, UITableViewDelegate, UITable
   
   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "trendingRepoTableViewCell") as? TrendingRepoTableViewCell else {return UITableViewCell()}
-    let repo = RepoModel(image: <#T##UIImage#>, name: "Swift", description: "Descrip", numberOfForks: 22, lang: "C++", numberOfContributors: 687, repoUrl: "www.intuit.com")
-    
+    let repo = RepoModel(image: UIImage(named: "searchIconLarge")!, name: "Swift", description: "Descrip", numberOfForks: 22, lang: "C++", numberOfContributors: 687, repoUrl: "www.intuit.com")
+    cell.configureCell(repo: repo)
   }
   
 
