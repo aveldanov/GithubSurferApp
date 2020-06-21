@@ -18,6 +18,10 @@ class TrendingFeedViewController: UIViewController, UITableViewDelegate, UITable
     tableView.delegate = self
     tableView.dataSource = self
     tableView.reloadData()
+//    DownloadService.instance.downloadTrendingRepoDictArray { (json) in
+//      print("Downloaded")
+//    }
+    
   }
   
   func numberOfSections(in tableView: UITableView) -> Int {

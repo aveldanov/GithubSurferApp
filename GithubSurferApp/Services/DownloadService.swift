@@ -13,10 +13,11 @@ class DownloadService {
   static let instance = DownloadService()
   
   func downloadTrendingRepoDictArray(completion: @escaping (_ reposDictArray:[Dictionary<String,Any>])->() ){
+    print("Boom")
     AF.request(trendingRepoUrl).responseJSON { (response) in
-      guard let json = response.result as? Dictionary<String,Any> else {return}
-      
-      
+      guard let json = response.value as? Dictionary<String,Any> else {return print("YO")}
+      print("YAHOO")
+      print(json)
     }
     
     
