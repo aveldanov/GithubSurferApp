@@ -18,9 +18,9 @@ class TrendingFeedViewController: UIViewController, UITableViewDelegate, UITable
     tableView.delegate = self
     tableView.dataSource = self
     tableView.reloadData()
-//    DownloadService.instance.downloadTrendingRepoDictArray { (json) in
-//      print("Downloaded")
-//    }
+    DownloadService.instance.downloadTrendingRepoDictArray { (reposDictArray) in
+      print(reposDictArray)
+    }
     
   }
   

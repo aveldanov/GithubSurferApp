@@ -13,11 +13,26 @@ class DownloadService {
   static let instance = DownloadService()
   
   func downloadTrendingRepoDictArray(completion: @escaping (_ reposDictArray:[Dictionary<String,Any>])->() ){
-    print("Boom")
+    
+    var trendingRepoArray = [Dictionary<String,Any>]()
+    
     AF.request(trendingRepoUrl).responseJSON { (response) in
       guard let json = response.value as? Dictionary<String,Any> else {return print("YO")}
-      print("YAHOO")
-      print(json)
+      guard let repoDictArray = json["items"] as? [Dictionary<String,Any>] else {return}
+      for repoDict in repoDictArray{
+//        print(repoDict)
+        if trendingRepoArray.count <= 10 {
+          trendingRepoArray.append(repoDict)
+          
+        }else{
+          break
+        }
+        
+      }
+//      print(trendingRepoArray)
+      
+      completion(trendingRepoArray)
+
     }
     
     
