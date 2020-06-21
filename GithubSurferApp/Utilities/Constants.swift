@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+
+//MARK: - URLs
+
+let trendingRepoUrl = "https://api.github.com/search/repositories?q=Swift&sort=stars&order=desc"
+let searchUrl = "https://api.github.com/search/repositories?q="
+let starsDescSegment = "&sort=stars&order=desc"
+let readMeSegment = "blob/master/README.md"
