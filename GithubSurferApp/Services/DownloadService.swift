@@ -46,4 +46,16 @@ class DownloadService {
     }
   }
   
+  func downloadTrendingRepo(fromDict dict: Dictionary<String,Any>)->Repo{
+    let avatarUrl = dict["avatar_url"] as! String
+    let name = dict["name"]
+    let desc = dict["description"] as! String
+    let numberOfForks = dict["forks_count"] as! Int
+    let lang = dict["language"] as! String
+    
+    let repo = RepoModel(image: <#T##UIImage#>, name: <#T##String#>, description: <#T##String#>, numberOfForks: <#T##Int#>, lang: <#T##String#>, numberOfContributors: <#T##Int#>, repoUrl: <#T##String#>)
+    
+    
+  }
+  
 }
