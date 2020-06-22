@@ -104,9 +104,15 @@ class DownloadService {
     
   }
   
-  func downloadContributorsData(for contricUrl: String, completion: @escaping (_ contributors:Int)->()){
+  func downloadContributorsData(for contributersUrl: String, completion: @escaping (_ contributors:Int)->()){
     
-    AF.request(<#T##convertible: URLConvertible##URLConvertible#>)
+    AF.request(contributersUrl).responseJSON { (response) in
+      guard let json = response.value as? [Dictionary<String,Any>] else {return}
+      if !json.isEmpty{
+        let contributions = json.count
+        completion(contributions)
+      }
+    }
     
   }
   
