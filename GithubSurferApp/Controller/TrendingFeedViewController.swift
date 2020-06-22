@@ -23,8 +23,13 @@ class TrendingFeedViewController: UIViewController, UITableViewDelegate, UITable
 //    }
     
     DownloadService.instance.downloadTrendingRepos { (reposArray) in
-      print(reposArray[0])
+      print(reposArray[0].name)
     }
+    
+//    DownloadService.instance.downloadTrendingRepoDictArray { (repoArray) in
+//      print("YOUOUOUP:")
+//      print(repoArray)
+//    }
     
   }
   

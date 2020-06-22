@@ -21,11 +21,6 @@ class DownloadService {
       guard let json = response.value as? Dictionary<String,Any> else {return print("YO")}
       guard let repoDictArray = json["items"] as? [Dictionary<String,Any>] else {return}
       for repoDict in repoDictArray{
-        //        print(repoDict)
-        
-        
-        
-        
         if trendingRepoArray.count <= 9 {
           
           guard
@@ -35,11 +30,12 @@ class DownloadService {
             let lang = repoDict["language"] as? String,
             let contributorsUrl = repoDict["contributors_url"] as? String,
             let repoUrl = repoDict["html_url"] as? String,
-            let ownerDict = repoDict["onwer"] as? Dictionary<String, Any>,
+            let ownerDict = repoDict["owner"] as? Dictionary<String, Any>,
             let avatarUrl = ownerDict["avatar_url"] as? String
+
             else {break}
           
-          
+
           let repoDictionary: Dictionary<String,Any> =
             ["name":name,
              "description": desc,
@@ -57,7 +53,7 @@ class DownloadService {
         }
         
       }
-      //      print(trendingRepoArray)
+//            print(trendingRepoArray)
       
       completion(trendingRepoArray)
     }
@@ -70,12 +66,25 @@ class DownloadService {
     downloadTrendingRepoDictArray { (trendingReposDictArray) in
       for dict in trendingReposDictArray{
         self.downloadTrendingRepo(fromDict: dict) { (returnedRepo) in
-        reposArray.append(returnedRepo)
+          
+          if reposArray.count < 9{
+            reposArray.append(returnedRepo)
+
+          }else{
+            let sortedArray = reposArray.sorted { (repoA, repoB) -> Bool in
+              if repoA.numberOfForks > repoB.numberOfForks{
+                return true
+              }else{
+                return false
+              }
+            }
+            completion(sortedArray)
+
+          }
 
         }
 
       }
-      completion(reposArray)
       
     }
     
