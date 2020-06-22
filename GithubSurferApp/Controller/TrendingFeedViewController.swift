@@ -22,8 +22,8 @@ class TrendingFeedViewController: UIViewController, UITableViewDelegate, UITable
 //      print(reposDictArray)
 //    }
     
-    DownloadService.instance.downloadTrendingRepos { (repoArray) in
-      print(repoArray[0].name)
+    DownloadService.instance.downloadTrendingRepos { (reposArray) in
+      print(reposArray[0])
     }
     
   }

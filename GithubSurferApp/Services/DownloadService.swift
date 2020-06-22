@@ -21,22 +21,22 @@ class DownloadService {
       guard let json = response.value as? Dictionary<String,Any> else {return print("YO")}
       guard let repoDictArray = json["items"] as? [Dictionary<String,Any>] else {return}
       for repoDict in repoDictArray{
-//        print(repoDict)
+        //        print(repoDict)
         
-
+        
         
         
         if trendingRepoArray.count <= 9 {
           
           guard
-          let name = repoDict["name"] as? String,
-          let desc = repoDict["description"] as? String,
-          let numberOfForks = repoDict["forks_count"] as? Int,
-          let lang = repoDict["language"] as? String,
-          let contributorsUrl = repoDict["contributors_url"] as? String,
-          let repoUrl = repoDict["html_url"] as? String,
+            let name = repoDict["name"] as? String,
+            let desc = repoDict["description"] as? String,
+            let numberOfForks = repoDict["forks_count"] as? Int,
+            let lang = repoDict["language"] as? String,
+            let contributorsUrl = repoDict["contributors_url"] as? String,
+            let repoUrl = repoDict["html_url"] as? String,
             let ownerDict = repoDict["onwer"] as? Dictionary<String, Any>,
-          let avatarUrl = ownerDict["avatar_url"] as? String
+            let avatarUrl = ownerDict["avatar_url"] as? String
             else {break}
           
           
@@ -57,7 +57,7 @@ class DownloadService {
         }
         
       }
-//      print(trendingRepoArray)
+      //      print(trendingRepoArray)
       
       completion(trendingRepoArray)
     }
@@ -69,29 +69,42 @@ class DownloadService {
     var reposArray = [RepoModel]()
     downloadTrendingRepoDictArray { (trendingReposDictArray) in
       for dict in trendingReposDictArray{
-       let repo = self.downloadTrendingRepo(fromDict: dict)
-        reposArray.append(repo)
-        
+        self.downloadTrendingRepo(fromDict: dict) { (returnedRepo) in
+        reposArray.append(returnedRepo)
+
+        }
+
       }
       completion(reposArray)
-
+      
     }
     
   }
   
-  func downloadTrendingRepo(fromDict dict: Dictionary<String,Any>)->RepoModel{
+  func downloadTrendingRepo(fromDict dict: Dictionary<String,Any>, completion: @escaping (_ repo:RepoModel)->()){
     let avatarUrl = dict["avatar_url"] as! String
-    let contributorsUrl = dict["contributors_url"] as? String
+    let contributorsUrl = dict["contributors_url"] as! String
     let name = dict["name"] as! String
     let desc = dict["description"] as! String
     let numberOfForks = dict["forks_count"] as! Int
     let lang = dict["language"] as! String
-    let numberOfContributors = 123
     let repoUrl = dict["html_url"] as! String
     
-    let repo = RepoModel(image: UIImage(named: "searchIconLarge")!, name: name, description: desc, numberOfForks: numberOfForks, lang: lang, numberOfContributors: numberOfContributors, repoUrl: repoUrl)
+    downloadImage(for: avatarUrl) { (returnedImage) in
+      self.downloadContributorsData(for: contributorsUrl) { (returnedContributions) in
+        
+        let repo = RepoModel(image: returnedImage, name: name, description: desc, numberOfForks: numberOfForks, lang: lang, numberOfContributors: returnedContributions, repoUrl: repoUrl)
+        completion(repo)
+        
+        
+      }
+    }
     
-    return repo
+    
+    
+    
+    
+    
   }
   
   
