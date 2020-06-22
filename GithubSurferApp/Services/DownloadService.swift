@@ -32,9 +32,18 @@ class DownloadService {
 //      print(trendingRepoArray)
       
       completion(trendingRepoArray)
-
     }
-    
-    
   }
+  
+  
+  
+  func downloadTrendingRepo(completion: @escaping (_ reposArray: [Repo])-> () ){
+    downloadTrendingRepoDictArray { (trendingReposDictArray) in
+      for dict in trendingReposDictArray{
+        // setup each property
+        
+      }
+    }
+  }
+  
 }
