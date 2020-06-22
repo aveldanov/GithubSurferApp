@@ -22,6 +22,10 @@ class TrendingFeedViewController: UIViewController, UITableViewDelegate, UITable
 //      print(reposDictArray)
 //    }
     
+    DownloadService.instance.downloadTrendingRepos { (repoArray) in
+      print(repoArray[0].name)
+    }
+    
   }
   
   func numberOfSections(in tableView: UITableView) -> Int {

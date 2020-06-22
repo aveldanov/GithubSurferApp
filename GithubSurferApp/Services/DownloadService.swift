@@ -21,8 +21,35 @@ class DownloadService {
       guard let repoDictArray = json["items"] as? [Dictionary<String,Any>] else {return}
       for repoDict in repoDictArray{
 //        print(repoDict)
-        if trendingRepoArray.count <= 10 {
-          trendingRepoArray.append(repoDict)
+        
+
+        
+        
+        if trendingRepoArray.count <= 9 {
+          
+          guard
+          let name = repoDict["name"] as? String,
+          let desc = repoDict["description"] as? String,
+          let numberOfForks = repoDict["forks_count"] as? Int,
+          let lang = repoDict["language"] as? String,
+          let contributorsUrl = repoDict["contributors_url"] as? String,
+          let repoUrl = repoDict["html_url"] as? String,
+            let ownerDict = repoDict["onwer"] as? Dictionary<String, Any>,
+          let avatarUrl = ownerDict["avatar_url"] as? String
+            else {break}
+          
+          
+          let repoDictionary: Dictionary<String,Any> =
+            ["name":name,
+             "description": desc,
+             "forks_count": numberOfForks,
+             "language": lang,
+             "contributors_url": contributorsUrl,
+             "html_url": repoUrl,
+             "avatar_url": avatarUrl
+          ]
+          
+          trendingRepoArray.append(repoDictionary)
           
         }else{
           break
@@ -37,25 +64,36 @@ class DownloadService {
   
   
   
-  func downloadTrendingRepo(completion: @escaping (_ reposArray: [Repo])-> () ){
+  func downloadTrendingRepos(completion: @escaping (_ reposArray: [RepoModel])-> () ){
+    var reposArray = [RepoModel]()
     downloadTrendingRepoDictArray { (trendingReposDictArray) in
       for dict in trendingReposDictArray{
-        // setup each property
+       let repo = self.downloadTrendingRepo(fromDict: dict)
+        reposArray.append(repo)
         
       }
+      completion(reposArray)
+
     }
+    
   }
   
-  func downloadTrendingRepo(fromDict dict: Dictionary<String,Any>)->Repo{
+  func downloadTrendingRepo(fromDict dict: Dictionary<String,Any>)->RepoModel{
     let avatarUrl = dict["avatar_url"] as! String
-    let name = dict["name"]
+    let contributorsUrl = dict["contributors_url"] as? String
+    let name = dict["name"] as! String
     let desc = dict["description"] as! String
     let numberOfForks = dict["forks_count"] as! Int
     let lang = dict["language"] as! String
+    let numberOfContributors = 123
+    let repoUrl = dict["html_url"] as! String
     
-    let repo = RepoModel(image: <#T##UIImage#>, name: <#T##String#>, description: <#T##String#>, numberOfForks: <#T##Int#>, lang: <#T##String#>, numberOfContributors: <#T##Int#>, repoUrl: <#T##String#>)
+    let repo = RepoModel(image: UIImage(named: "searchIconLarge")!, name: name, description: desc, numberOfForks: numberOfForks, lang: lang, numberOfContributors: numberOfContributors, repoUrl: repoUrl)
     
-    
+    return repo
   }
+  
+  
+  
   
 }
