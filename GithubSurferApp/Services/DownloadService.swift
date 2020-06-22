@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import AlamofireImage
 
 class DownloadService {
   static let instance = DownloadService()
@@ -93,6 +94,21 @@ class DownloadService {
     return repo
   }
   
+  
+  func downloadImage(for avatarUrl:String, completion: @escaping (_ image:UIImage)->()){
+    AF.request(avatarUrl).responseImage { (imageResponse) in
+      guard let image = imageResponse.value else{return}
+      completion(image)
+    }
+    
+    
+  }
+  
+  func downloadContributorsData(for contricUrl: String, completion: @escaping (_ contributors:Int)->()){
+    
+    AF.request(<#T##convertible: URLConvertible##URLConvertible#>)
+    
+  }
   
   
   
