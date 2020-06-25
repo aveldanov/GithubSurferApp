@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 class TrendingFeedViewController: UIViewController {
-//  let refreshControl = UIRefreshControl()
+  let refreshControl = UIRefreshControl()
   var dataSource = PublishSubject<[RepoModel]>()
   var disposeBag = DisposeBag()
   
@@ -21,12 +21,12 @@ class TrendingFeedViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-//    refreshControl.tintColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
-//    refreshControl.attributedTitle = NSAttributedString(string: "Fetching github repos 🛹", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray, NSAttributedString.Key.font: UIFont(name: "AvenirNext-DemiBold", size: 17)!])
-//    
-//    refreshControl.addTarget(self, action: #selector(fetchData),  for: .valueChanged)
-//    
+    tableView.refreshControl = refreshControl
+    refreshControl.tintColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+    refreshControl.attributedTitle = NSAttributedString(string: "Fetching github repos 🛹", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray, NSAttributedString.Key.font: UIFont(name: "AvenirNext-DemiBold", size: 17)!])
+    refreshControl.addTarget(self, action: #selector(self.fetchData),  for: .valueChanged)
     
+
 //    tableView.delegate = self
 //    tableView.dataSource = self
 //    tableView.reloadData()
@@ -65,10 +65,18 @@ class TrendingFeedViewController: UIViewController {
 //  }
 
   
+  @objc func refresh(){
+    print("KJLJO")
+  }
   
-  func fetchData(){
+  
+  @objc func fetchData(){
+    print("YO")
+
     DownloadService.instance.downloadTrendingRepos { (trendingRepoArray) in
       self.dataSource.onNext(trendingRepoArray)
+      self.refreshControl.endRefreshing()
+
     }
   }
 
