@@ -10,7 +10,10 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
-    override func viewDidLoad() {
+  @IBOutlet weak var searchFieldOutlet: RoundedBorderTextField!
+  @IBOutlet weak var tableView: UITableView!
+  
+  override func viewDidLoad() {
         super.viewDidLoad()
 
     }
