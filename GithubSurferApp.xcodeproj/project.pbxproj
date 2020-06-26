@@ -21,6 +21,7 @@
 		21549534249ED52E00D0621E /* TrendingRepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21549533249ED52E00D0621E /* TrendingRepoTableViewCell.swift */; };
 		21549538249F16C800D0621E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21549537249F16C800D0621E /* Constants.swift */; };
 		2154953A249F1D1800D0621E /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21549539249F1D1800D0621E /* DownloadService.swift */; };
+		215F908924A5B865006FB41F /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215F908824A5B865006FB41F /* SearchTableViewCell.swift */; };
 		2F745163845480466ECCBF8E /* Pods_GithubSurferApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010BE3124EB9939861BC65C5 /* Pods_GithubSurferApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		21549533249ED52E00D0621E /* TrendingRepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoTableViewCell.swift; sourceTree = "<group>"; };
 		21549537249F16C800D0621E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		21549539249F1D1800D0621E /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
+		215F908824A5B865006FB41F /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		964656C745E4C26D2B1269AD /* Pods-GithubSurferApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSurferApp.debug.xcconfig"; path = "Target Support Files/Pods-GithubSurferApp/Pods-GithubSurferApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F4B660663062E6E8DA06D0CF /* Pods-GithubSurferApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSurferApp.release.xcconfig"; path = "Target Support Files/Pods-GithubSurferApp/Pods-GithubSurferApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +120,7 @@
 				21549533249ED52E00D0621E /* TrendingRepoTableViewCell.swift */,
 				2154952F249DEBEE00D0621E /* RoundedBorderTextField.swift */,
 				2154952D249DEA6D00D0621E /* RoundedCornerButton.swift */,
+				215F908824A5B865006FB41F /* SearchTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				21549532249ED20900D0621E /* RepoModel.swift in Sources */,
 				21549530249DEBEE00D0621E /* RoundedBorderTextField.swift in Sources */,
 				21488C5A249B480700DF7564 /* AppDelegate.swift in Sources */,
+				215F908924A5B865006FB41F /* SearchTableViewCell.swift in Sources */,
 				2154952A249C7B6900D0621E /* SearchViewController.swift in Sources */,
 				2154953A249F1D1800D0621E /* DownloadService.swift in Sources */,
 				2154952E249DEA6D00D0621E /* RoundedCornerButton.swift in Sources */,
