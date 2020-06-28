@@ -355,6 +355,13 @@
                                                 <constraint firstItem="330-7B-fbB" firstAttribute="top" secondItem="lYL-FM-psd" secondAttribute="topMargin" id="WFo-He-g7G"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="backViewOutlet" destination="330-7B-fbB" id="cQR-3I-k6R"/>
+                                            <outlet property="forksCountOutlet" destination="JO4-fc-5xy" id="vvd-tz-t4n"/>
+                                            <outlet property="langOutlet" destination="bP5-JD-2sZ" id="Fkl-Uw-7WL"/>
+                                            <outlet property="repoDescOutlet" destination="1b7-xg-FMx" id="702-Vs-Qhq"/>
+                                            <outlet property="repoNameOutlet" destination="bCd-DI-XBf" id="bHY-jC-hgM"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

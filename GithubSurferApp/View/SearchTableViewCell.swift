@@ -10,13 +10,29 @@ import UIKit
 
 class SearchTableViewCell: UITableViewCell {
 
+  @IBOutlet weak var repoNameOutlet: UILabel!
+  @IBOutlet weak var repoDescOutlet: UILabel!
+  @IBOutlet weak var forksCountOutlet: UILabel!
+  @IBOutlet weak var langOutlet: UILabel!
+  @IBOutlet weak var backViewOutlet: UIView!
+  
+  private var repoUrl:String?
+  
     override func awakeFromNib() {
         super.awakeFromNib()
+      
+      backViewOutlet.layer.cornerRadius = 15
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+  
+  func configureCell(repo: RepoModel){
+    repoNameOutlet.text = repo.name
+    repoDescOutlet.text = repo.description
+    forksCountOutlet.text = String(describing: repo.numberOfForks)
+    langOutlet.text = repo.lang
+    repoUrl = repo.repoUrl
+    
+  }
 
-    }
 
 }
