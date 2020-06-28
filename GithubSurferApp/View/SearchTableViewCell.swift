@@ -20,7 +20,6 @@ class SearchTableViewCell: UITableViewCell {
   
     override func awakeFromNib() {
         super.awakeFromNib()
-      
       backViewOutlet.layer.cornerRadius = 15
     }
 
